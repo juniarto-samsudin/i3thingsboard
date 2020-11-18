@@ -116,7 +116,6 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
-        storageClassName: "nfs-tb"    
         resources:
           requests:
             storage: 100Mi
@@ -200,10 +199,9 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
-        storageClassName: "nfs-tb"    
         resources:
           requests:
-            storage: 100Mi
+            storage: 200Mi
 ---
 apiVersion: v1
 kind: Service
@@ -276,10 +274,9 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
-        storageClassName: "nfs-tb"    
         resources:
           requests:
-            storage: 100Mi
+            storage: 200Mi
 ---
 apiVersion: v1
 kind: Service

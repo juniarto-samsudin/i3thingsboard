@@ -108,6 +108,7 @@ spec:
         name: data
       spec:
         accessModes: [ "ReadWriteOnce" ]
+        storageClassName: nfs
         resources:
           requests:
             storage: 100Mi
@@ -115,6 +116,7 @@ spec:
         name: datalog
       spec:
         accessModes: [ "ReadWriteOnce" ]
+        storageClassName: nfs
         resources:
           requests:
             storage: 100Mi
@@ -268,22 +270,25 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
+        storageClassName: nfs    
         resources:
           requests:
-            storage: 200Mi
+            storage: 100Mi
     - metadata:
         name: app-logs
       spec:
         accessModes:
           - ReadWriteOnce
+        storageClassName: nfs    
         resources:
           requests:
-            storage: 200Mi
+            storage: 100Mi
     - metadata:
         name: config
       spec:
         accessModes:
           - ReadWriteOnce
+        storageClassName: nfs
         resources:
           requests:
             storage: 50Mi
